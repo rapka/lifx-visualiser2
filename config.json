@@ -3,7 +3,7 @@
   "beatThreshold": 0.01,
   "cutoffMultplier": 1.2,
   "beatDecayRate": 0.3,
-  "colourTransitionTime": 200,
+  "colourTransitionTime": 100,
   "colours": [
     {
       "hsk": "30,100,9000",

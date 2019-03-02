@@ -98,7 +98,7 @@ const onBeat = level => {
   client.lights().forEach(light => { 
     getLabel(light, name => {
       const colour = pickNextColour(name, levelDifference, level)
-      light.color(colour.h, colour.s, level * 100, colour.k, config.colourTransitionTime || 200)   
+      light.color(colour.h, colour.s, level * 100, colour.k, config.colourTransitionTime || 100)   
     })
   })
 }
