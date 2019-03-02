@@ -1,8 +1,8 @@
 {
-  "beatHoldFrames": 16,
+  "beatHoldFrames": 20,
   "beatThreshold": 0.01,
-  "cutoffMultplier": 1.2,
-  "beatDecayRate": 0.3,
+  "cutoffMultplier": 1.1,
+  "beatDecayRate": 0.4,
   "colourTransitionTime": 100,
   "colours": [
     {
@@ -23,25 +23,91 @@
     },
     {
       "hsk": "150,100,9000",
-      "triggeredBy": "BRIGHTNESS VALUE",
-      "brightnessRange": {
-        "min": 0.8,
-        "max": 0.9
+      "weight": 1
+    },
+    {
+      "hsk": "180,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "210,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "240,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "270,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "300,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "330,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "360,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "30,100,9000",
+      "triggeredBy": "BRIGHTNESS CHANGE",
+      "triggerRange": {
+        "min": 0.9,
+        "max": 1
       },
       "useLights": [
-        "Tudor's Bedroom Light",
-        "Natalie's Bedroom Light"
+        "Tudor's Bedside",
+        "Natalie's Bedside"
       ]
     },
     {
-      "hsk": "80,80,9000",
-      "triggeredBy": "BRIGHTNESS CHANGE",
-      "brightnessRange": {
-        "min": 0.7,
-        "max": 0.75
+      "hsk": "190,100,9000",
+      "triggeredBy": "BRIGHTNESS VALUE",
+      "triggerRange": {
+        "min": 0.9,
+        "max": 1
       },
       "useLights": [
-        "Natalie's Bedroom Light"
+        "Tudor's Bedside"
+      ]
+    },
+    {
+      "hsk": "315,100,9000",
+      "triggeredBy": "BRIGHTNESS VALUE",
+      "triggerRange": {
+        "min": 0.9,
+        "max": 1
+      },
+      "useLights": [
+        "Natalie's Bedside"
+      ]
+    },
+    {
+      "hsk": "30,100,9000",
+      "triggeredBy": "BRIGHTNESS VALUE",
+      "triggerRange": {
+        "min": 0.9,
+        "max": 1
+      },
+      "useLights": [
+        "Tudor's Bedside"
+      ],
+      "weight": 2
+    },
+    {
+      "hsk": "240,100,9000",
+      "triggeredBy": "BRIGHTNESS VALUE",
+      "triggerRange": {
+        "min": 0.9,
+        "max": 1
+      },
+      "useLights": [
+        "Natalie's Bedside"
       ],
       "weight": 2
     }
