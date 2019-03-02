@@ -86,15 +86,13 @@ const detectBeat = level => {
 }
 
 let curColour = 0
-let lastLevel = 0
-const onBeat = (level) => {
+const onBeat = level => {
   if(!client.lights()) return
 
-  let diff = Math.abs(lastLevel - level)
-  diff = clamp(diff, 0, 1)
-  if(diff === 1) curColour += 60
+  level = clamp(level, 0, 1)
+  if(level === 1) curColour += 60
 
   client.lights().forEach(light => {
-    light.color(curColour%360, 100, level * 100, 9000, 200);        
+    light.color(curColour%360, 100, level * 100, 9000, 100);        
   })
 }
