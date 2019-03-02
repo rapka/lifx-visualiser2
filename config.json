@@ -1,0 +1,49 @@
+{
+  "beatHoldFrames": 16,
+  "beatThreshold": 0.01,
+  "cutoffMultplier": 1.2,
+  "beatDecayRate": 0.3,
+  "colourTransitionTime": 200,
+  "colours": [
+    {
+      "hsk": "30,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "60,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "90,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "120,100,9000",
+      "weight": 1
+    },
+    {
+      "hsk": "150,100,9000",
+      "triggeredBy": "BRIGHTNESS VALUE",
+      "brightnessRange": {
+        "min": 0.8,
+        "max": 0.9
+      },
+      "useLights": [
+        "Tudor's Bedroom Light",
+        "Natalie's Bedroom Light"
+      ]
+    },
+    {
+      "hsk": "80,80,9000",
+      "triggeredBy": "BRIGHTNESS CHANGE",
+      "brightnessRange": {
+        "min": 0.7,
+        "max": 0.75
+      },
+      "useLights": [
+        "Natalie's Bedroom Light"
+      ],
+      "weight": 2
+    }
+  ]
+}
