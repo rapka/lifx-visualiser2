@@ -25,3 +25,6 @@ Run ```npm start```. Your OS might ask for if you want to allow the terminal to 
 
 ## Credits
 [Beat detection algorithm](https://therewasaguy.github.io/p5-music-viz/)
+
+## Dev Branch
+The dev branch (`git checkout dev`) has a prototype for a colour definition system. Using that system, you can define lights and colours as well as how they trigger (e.g. by brightness or change in volume) and which lights to use.
