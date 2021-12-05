@@ -15,13 +15,13 @@ const getLabel = (light, callback) => {
 
 client.on('light-new', light => {
   getLabel(light, name => {
-    console.log(name + " connected!")
+    console.log(`light "${name}" connected`)
   })
 })
 
 client.on('light-online', light => {
   getLabel(light, name => {
-    console.log(name + " reconnected")
+    console.log(`light "${name}" reconnected`)
   })
 })
 
@@ -37,7 +37,7 @@ client.init()
 // frameRate() is usually around 60 frames per second,
 // so 20 fps = 3 beats per second, meaning if the song is over 180 BPM,
 // we wont respond to every beat.
-const beatHoldFrames = 8
+const beatHoldFrames = 7
 
 // what amplitude level can trigger a beat?
 const beatThreshold = 0.001
@@ -45,7 +45,7 @@ const beatThreshold = 0.001
 // When we have a beat, beatCutoff will be reset to 1.1*beatThreshold, and then decay
 // Level must be greater than beatThreshold and beatCutoff before the next beat can trigger.
 let beatCutoff = 0
-let beatDecayRate = 0.4 // how fast does beat cutoff decay?
+let beatDecayRate = 0.6 // how fast does beat cutoff decay?
 let framesSinceLastBeat = 0 // once this equals beatHoldFrames, beatCutoff starts to decay.
 
 // microphone
@@ -90,7 +90,7 @@ const onBeat = level => {
   if(!client.lights()) return
 
   level = clamp(level, 0, 1)
-  if(level === 1) curColour += 60
+  if(level === 1 || true) curColour += 5
 
   client.lights().forEach(light => {
     light.color(curColour%360, 100, level * 100, 9000, 100);        
